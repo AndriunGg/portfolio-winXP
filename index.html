@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" href="/imgs/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        
-    
-    <div class="ventana">
-
+    <div class="container">    
+    <div class="ventana" draggable="false" id="window">
        <div class="titulo__ventana">
             <span class="title"> <h1>сдр • Microsoft Internet Explorer </h1></span>
             <div class="buttons">
@@ -30,7 +28,6 @@
           <p>|</p>
           <p>SDRGG</p>
        </div>
-
        <div class="contenido">
             <div class="imagen">
                 <img class="profile" src="/imgs/sdr.jpg" alt="profile">
@@ -44,13 +41,10 @@
             <div class="byf">
                 <div class="badge">byf123123</div>
                 <div class="content_byf">
-                    
                     <h2>BYF</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quaerat itaque, dolor expedita exercitationem ea nesciunt</p>
-                
                 </div>
             </div>
-
             <div class="hobbies">
                 <h3>Hobbies</h3>
                 <ul>
@@ -60,14 +54,12 @@
                     <li>Programar</li>
                 </ul>
             </div>
-
             <div class="libros">
                 <h4>Ultimos libros leidos</h4>
                 <ul>
                     <li>Ser y la nada jean</li>
                     <li>la pasion de acuerdo a gh</li>
                     <li>Carta a los corintios (Biblia)</li>
-
                 </ul>
             </div>
             <div class="musica">
@@ -79,11 +71,13 @@
                         <li>Submarine- The Marias</li>
                         <li>SWAG II</li>
                     </ul>
-            </div>
-        
+            </div>     
        </div>
+    </div>
+    </div>
 
-    </div>
-    </div>
+    <script src="windows.js">
+    
+    </script>
 </body>
 </html>

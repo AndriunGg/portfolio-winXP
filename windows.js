@@ -1,7 +1,7 @@
 console.log("conectau")
 
 
-const ventana= document.getElementById("window")
+const ventana = document.getElementById("window")
 
 
 let EstaSeleccionado = false;
@@ -19,18 +19,18 @@ let offsetX, offsetY;
 //offsetX nos da el valor donde se ubica el click en el eje x segun la ventana
 
 
-ventana.addEventListener("mousedown", (e)=>{
+ventana.addEventListener("mousedown", (e) => {
     EstaSeleccionado = true;
-    offsetX= e.clientX - ventana.offsetLeft
-    offsetY= e.clientY - ventana.offsetTop
+    offsetX = e.clientX - ventana.offsetLeft
+    offsetY = e.clientY - ventana.offsetTop
     ventana.style.cursor = "grabbing"
 
-    console.log("resta",e.offsetX)
+    //  console.log("resta",e.offsetX)
 })
 
 
-document.addEventListener("mousemove", (e)=>{
-    if (!EstaSeleccionado) return 
+document.addEventListener("mousemove", (e) => {
+    if (!EstaSeleccionado) return
 
     ventana.style.left = (e.clientX - offsetX) + "px"
 
@@ -38,10 +38,10 @@ document.addEventListener("mousemove", (e)=>{
     ventana.style.top = (e.clientY - offsetY) + "px"
     ventana.style.cursor = "grabbing"
 
-        console.log(e.clientX)  
+    //console.log(e.clientX)  
 })
 
-document.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", () => {
     EstaSeleccionado = false;
     ventana.style.cursor = "default"
 

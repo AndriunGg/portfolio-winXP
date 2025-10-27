@@ -1,44 +1,32 @@
-console.log("conectau")
-
-
+//DOM
 const ventana = document.getElementById("window")
+const ventanita = document.getElementById("ventanita")
 
-
+//State variables
 let EstaSeleccionado = false;
-
-
 let offsetX, offsetY;
 
-
-//mousedown- Almacena la ubicacion inicial del elememto en X y Y
-
-//clientX devuelve la posicion en x del cursor  con respecto a todo el html
-
-//Offsetleft nos da el valor segun la posicion segun la esquina izquierda de la ventana en el eje X con respecto al documento
-
-//offsetX nos da el valor donde se ubica el click en el eje x segun la ventana
+//mousedown-Initial location of the element in X and Y axis according to the viewport
+//clientX-returns the position in the x axis of the cursor according to the document
+//Offsetleft-returns the position according to the left edge of the window in the X axis according to the document
+//offsetX -returns the x value of the cursor according to the window
 
 
-ventana.addEventListener("mousedown", (e) => {
-    EstaSeleccionado = true;
-    offsetX = e.clientX - ventana.offsetLeft
-    offsetY = e.clientY - ventana.offsetTop
-    ventana.style.cursor = "grabbing"
+ventanita.addEventListener("mousedown", (e) => {
+  EstaSeleccionado = true;
+  offsetX = e.clientX - ventana.offsetLeft;
+  offsetY = e.clientY - ventana.offsetTop;
+  ventana.style.cursor = "grabbing";
 
-    //  console.log("resta",e.offsetX)
-})
+});
 
 
 document.addEventListener("mousemove", (e) => {
     if (!EstaSeleccionado) return
 
     ventana.style.left = (e.clientX - offsetX) + "px"
-
-    console.log(ventana.style.left)
     ventana.style.top = (e.clientY - offsetY) + "px"
     ventana.style.cursor = "grabbing"
-
-    //console.log(e.clientX)  
 })
 
 document.addEventListener("mouseup", () => {

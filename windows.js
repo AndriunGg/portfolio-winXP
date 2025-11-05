@@ -1,7 +1,8 @@
 //DOM
 const ventana = document.getElementById("window")
 const ventanita = document.getElementById("ventanita")
-
+const icono = document.getElementById("icon")
+const closeicon = document.getElementById("closew")
 //State variables
 let EstaSeleccionado = false;
 let offsetX, offsetY;
@@ -22,17 +23,25 @@ ventanita.addEventListener("mousedown", (e) => {
 
 
 document.addEventListener("mousemove", (e) => {
-    if (!EstaSeleccionado) return
+  if (!EstaSeleccionado) return
 
-    ventana.style.left = (e.clientX - offsetX) + "px"
-    ventana.style.top = (e.clientY - offsetY) + "px"
-    ventana.style.cursor = "grabbing"
+  ventana.style.left = (e.clientX - offsetX) + "px"
+  ventana.style.top = (e.clientY - offsetY) + "px"
+  ventana.style.cursor = "grabbing"
 })
 
 document.addEventListener("mouseup", () => {
-    EstaSeleccionado = false;
-    ventana.style.cursor = "default"
+  EstaSeleccionado = false;
+  ventana.style.cursor = "default"
 
 })
 
+
+closeicon.addEventListener("click", () => {
+  ventana.style.display = "none"
+})
+
+icono.addEventListener("dblclick", () => {
+  ventana.style.display = "block"
+})
 

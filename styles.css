@@ -16,7 +16,7 @@ body {
 }
 
 body {
-    background-image: url(/imgs/fondo.jpg);
+    background-image: url(./imgs/fondo.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

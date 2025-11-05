@@ -1,5 +1,6 @@
 # 🖥 Windows XP Portfolio — Retro Dev Showcase  
 A retro-styled portfolio concept that mimics the classic Windows XP desktop, designed for developers who want to present their work with creativity and nostalgia — **not an emulator**, just pure aesthetic.
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/edcd8204-758f-4072-b5ca-1087d6152228" />
 
 ## 🌱 Get Started  
 You can adapt this concept into your site or portfolio using any frontend framework or static page:

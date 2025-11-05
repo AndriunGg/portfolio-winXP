@@ -58,12 +58,13 @@ class DraggableWindow {
 
     this.init();
   }
-  
+
   init() {
     this.titleBar.addEventListener("mousedown", (e) => this.startDrag(e));
     document.addEventListener("mousemove", (e) => this.drag(e));
     document.addEventListener("mouseup", () => this.stopDrag());
     this.closeBtn.addEventListener("click", () => this.close());
+
   }
 
   startDrag(e) {
@@ -77,11 +78,12 @@ class DraggableWindow {
     if (!this.isSelected) return;
     this.element.style.left = e.clientX - this.offsetX + "px";
     this.element.style.top = e.clientY - this.offsetY + "px";
+
   }
 
   stopDrag() {
     this.isSelected = false;
-    this.titleBar.style.cursor = "grab";
+    this.titleBar.style.cursor = "default";
   }
 
   close() {

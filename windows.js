@@ -45,7 +45,17 @@
 //   ventana.style.display = "block"
 // })
 
+//Clicking functionality
+let grid_container = document.querySelector(".grid-container");
 
+grid_container.addEventListener("click",(e)=>{
+  const iconBtn = e.target.closest(".icon_btn");
+  const txt = iconBtn.querySelector(".txt_icon");
+  grid_container
+    .querySelectorAll(".active")
+    .forEach((el) => el.classList.remove("active"));
+    txt.classList.add("active")
+})
 ////////////////////////////////////////////////////////////////////////////////////////////////
 class DraggableWindow {
   constructor(elementId) {

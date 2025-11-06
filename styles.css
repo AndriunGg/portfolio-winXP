@@ -47,10 +47,7 @@ body {
     margin-bottom: 5px;
 }
 
-.icon_btn.active {
-    background-color: #0a246f;
-    outline: 1px dotted white;
-}
+
 
 #icon img {
     height: 40px;
@@ -63,7 +60,9 @@ body {
     font-size: 15px;
 
 }
-
+.active{
+    background-color: blue;
+}
 .insta {
     text-decoration: none;
     color: black;

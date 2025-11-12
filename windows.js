@@ -48,15 +48,16 @@
 //Clicking functionality
 let grid_container = document.querySelector(".grid-container");
 
-grid_container.addEventListener("click",(e)=>{
+grid_container.addEventListener("click", (e) => {
   const iconBtn = e.target.closest(".icon_btn");
   const txt = iconBtn.querySelector(".txt_icon");
   grid_container
     .querySelectorAll(".active")
     .forEach((el) => el.classList.remove("active"));
-    txt.classList.add("active")
+  txt.classList.add("active")
 })
 ////////////////////////////////////////////////////////////////////////////////////////////////
+let initialZ = 10;
 class DraggableWindow {
   constructor(elementId) {
     this.element = document.getElementById(elementId);
@@ -65,7 +66,6 @@ class DraggableWindow {
     this.isSelected = false;
     this.offsetX = 0;
     this.offsetY = 0;
-
     this.init();
   }
 
@@ -74,14 +74,21 @@ class DraggableWindow {
     document.addEventListener("mousemove", (e) => this.drag(e));
     document.addEventListener("mouseup", () => this.stopDrag());
     this.closeBtn.addEventListener("click", () => this.close());
-
+    this.element.addEventListener("mousedown", () => this.bringToFront());
   }
+
+  bringToFront() {
+    initialZ++;
+    this.element.style.zIndex = initialZ;
+  }
+
 
   startDrag(e) {
     this.isSelected = true;
     this.offsetX = e.clientX - this.element.offsetLeft;
     this.offsetY = e.clientY - this.element.offsetTop;
     this.titleBar.style.cursor = "grabbing";
+    this.bringToFront();
   }
 
   drag(e) {
@@ -94,15 +101,21 @@ class DraggableWindow {
   stopDrag() {
     this.isSelected = false;
     this.titleBar.style.cursor = "default";
+
   }
 
   close() {
     this.element.style.display = "none";
+    document.querySelector("iframe").src = "https://player.vimeo.com/video/1071968720?h=1f84d98c75&controls=0";
+
+
+
   }
 }
 
 // Usage:
 new DraggableWindow("window");
+new DraggableWindow("window2")
 
 class Icon {
   constructor(elementId, ventana) {
@@ -116,8 +129,21 @@ class Icon {
   }
   open() {
     this.ventana.style.display = "block";
+    // Si es window2, reproducir el video
+    if (this.ventana.id === "window2") {
+      const iframe = this.ventana.querySelector("iframe");
+      if (iframe) {
+        const src = iframe.src;
+        // Agregar parámetro de autoplay si no lo tiene
+        if (!src.includes("autoplay=1")) {
+          iframe.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
+        }
+      }
+    }
   }
 }
 
 
 new Icon("about", "window");
+
+new Icon("bruh", "window2")

@@ -82,6 +82,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: clip;
 }
 
 .contenido {
@@ -124,6 +125,27 @@ body {
 .img-proj img {
     max-width: 140px;
     border: 2px solid #000;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    gap: 4px;
+}
+
+.github img {
+    max-width: 25px;
+
+}
+
+.github a {
+    color: #0c6aaeff;
+    text-decoration: underline;
+}
+
+.deploy {
+    margin-left: auto
 }
 
 .titulo__ventana {

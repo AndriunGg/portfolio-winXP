@@ -116,6 +116,7 @@ class DraggableWindow {
 // Usage:
 new DraggableWindow("window");
 new DraggableWindow("window2")
+new DraggableWindow("window4")
 
 class Icon {
   constructor(elementId, ventana) {
@@ -130,7 +131,7 @@ class Icon {
   open() {
     this.ventana.style.display = "block";
     // Si es window2, reproducir el video
-    if (this.ventana.id === "window2") {
+    if (this.ventana.id === "window4") {
       const iframe = this.ventana.querySelector("iframe");
       if (iframe) {
         const src = iframe.src;
@@ -145,5 +146,6 @@ class Icon {
 
 
 new Icon("about", "window");
+new Icon("projects", "window2")
 
-new Icon("bruh", "window2")
+new Icon("bruh", "window4")

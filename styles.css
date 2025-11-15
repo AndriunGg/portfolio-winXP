@@ -94,6 +94,38 @@ body {
     border-radius: 0% 0% 8px 8px;
 }
 
+.projects {
+    height: 420px;
+    border-radius: 0% 0% 8px 8px;
+    background-color: #ede8d9;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+.project {
+    height: 120px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--border-color)4px 4px;
+    display: flex;
+
+}
+
+.img-proj {
+    padding: 10px 0px 10px 20px;
+    overflow: hidden;
+    width: 200px;
+
+}
+
+.img-proj img {
+    max-width: 140px;
+    border: 2px solid #000;
+}
+
 .titulo__ventana {
     border-radius: 8px 8px 0 0;
     border-bottom: 2px solid #000;
@@ -252,9 +284,6 @@ button:hover {
     width: 100%;
     height: 100%;
 }
-
-
-
 
 @media screen and (max-width: 821px) {
     .contenido {

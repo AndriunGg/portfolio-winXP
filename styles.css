@@ -121,7 +121,8 @@ body {
     width: 200px;
 
 }
-.txt h1{
+
+.txt h1 {
     font-size: 1.3rem;
 }
 
@@ -348,14 +349,14 @@ button:hover {
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     margin: 0;
-    
+
 }
 
 .contact-tagline {
     color: #333;
     font-style: italic;
     margin: 0;
-    
+
 }
 
 .social-links {
@@ -401,4 +402,3 @@ button:hover {
         padding: 5px;
     }
 }
-

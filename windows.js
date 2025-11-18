@@ -148,7 +148,6 @@ class Icon {
 
 new Icon("about", "window");
 new Icon("projects", "window2")
-
 new Icon("bruh", "window4")
 new Icon("contact", "window6")
 

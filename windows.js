@@ -118,6 +118,7 @@ new DraggableWindow("window");
 new DraggableWindow("window2")
 new DraggableWindow("window4")
 new DraggableWindow("window6")
+new DraggableWindow("window3")
 
 class Icon {
   constructor(elementId, ventana) {
@@ -150,4 +151,5 @@ new Icon("about", "window");
 new Icon("projects", "window2")
 new Icon("bruh", "window4")
 new Icon("contact", "window6")
+new Icon("studies", "window3")
 

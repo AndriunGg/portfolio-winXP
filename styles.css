@@ -1,6 +1,8 @@
 :root {
     --border-color: #696969;
 
+    --color-font: #000;
+    --color-bg: #fff;
 }
 
 * {
@@ -395,10 +397,70 @@ button:hover {
     font-weight: 500;
 }
 
-@media screen and (max-width: 821px) {
-    .contenido {
-        grid-template-rows: repeat(4, minmax(50px, 1fr));
-        gap: 5px 5px;
-        padding: 5px;
-    }
+
+/* ---------------------------------------------------- */
+
+.experience {
+    overflow: auto;
+    height: 420px;
+    background-color: #ede8d9;
+    border-radius: 0% 0% 8px 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.experience section {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 386px;
+}
+
+.section-title {
+    position: sticky;
+    top: 20px;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience article {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.experience aside {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.experience main {
+    padding-bottom: 2rem;
+}
+
+.dot {
+    --size: .5rem;
+    width: var(--size);
+    height: var(--size);
+    margin: calc((1rem - var(--size))/2);
+    border-radius: 50%;
+    background-color: var(--color-font);
+    flex-grow: 0;
+    position: sticky;
+    top: 20px;
+}
+
+.line {
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-font);
+    min-height: 50px;
 }
